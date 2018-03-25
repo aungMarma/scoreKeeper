@@ -1,0 +1,33 @@
+input {
+	width: 150px;
+	border: 10px solid rgb(100, 100, 100);
+}
+
+input[type="number"] {
+	width: 80px;
+	height: 40px;
+}
+
+* {
+	text-align: center;
+}
+
+.container {
+	padding-top: 15%;
+}
+
+html, body {
+	height: 100%;
+}
+
+.left-player {
+	color : blue;
+}
+
+.right-player {
+	color : green;
+}
+
+.rule {
+	color : red;
+}
