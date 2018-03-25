@@ -19,6 +19,8 @@ var ruleSetting = document.getElementsByTagName("input")[0];
 ruleSetting.value = 5;
 ruleSetting.addEventListener("input", function(argument) {
 	rule.textContent = this.value;
+	rightPlayerScore.setAttribute("style", rightPlayerScoreDefaultCSS);
+	leftPlayerScore.setAttribute("style", leftPlayerScoreDefaultCSS);
 })
 
 // left-side player scores
@@ -59,3 +61,4 @@ reset.addEventListener("click", function(){
 	rightPlayerScore.setAttribute("style", rightPlayerScoreDefaultCSS);
 	leftPlayerScore.setAttribute("style", leftPlayerScoreDefaultCSS);
 })
+
