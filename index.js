@@ -1,10 +1,10 @@
 
 //////////////////////////////////////////////////////////////////////////////////
-
-// left and right player socre
 var winning = document.getElementsByTagName("h1")[0];
 var defaultHTML = winning.innerHTML;
 var defaultCSS = winning.getAttribute("style");
+
+// left and right player socre
 var leftPlayerScore = document.getElementsByTagName("span")[0];
 var leftPlayerScoreDefaultCSS = leftPlayerScore.getAttribute("style");
 var rightPlayerScore = document.getElementsByTagName("span")[1];
@@ -49,7 +49,6 @@ rightPlayer.addEventListener("click", function(){
 		}
 	}
 })
-
 
 // reset game to five
 var reset = document.getElementsByTagName("input")[3];
