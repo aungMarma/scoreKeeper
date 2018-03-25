@@ -1,2 +1,3 @@
 # scoreKeeper
-# DOM manipulation a late night
+# Couple hrs of DOM manipulation at late night :(
+
