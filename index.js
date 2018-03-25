@@ -10,11 +10,11 @@ var leftPlayerScoreDefaultCSS = leftPlayerScore.getAttribute("style");
 var rightPlayerScore = document.getElementsByTagName("span")[1];
 var rightPlayerScoreDefaultCSS = rightPlayerScore.getAttribute("style");
 
-// setting winning score
+//  show score, playing to win
 var playingTo = document.getElementsByTagName("h2")[0];
 var rule = playingTo.firstChild.nextSibling;   // span
 
-// button
+// to set highest score playing to
 var ruleSetting = document.getElementsByTagName("input")[0];
 ruleSetting.value = 5;
 ruleSetting.addEventListener("click", function(argument) {
@@ -22,23 +22,31 @@ ruleSetting.addEventListener("click", function(argument) {
 
 })
 
-// left-side player
+// left-side player scores
 var leftPlayer = document.getElementsByTagName("input")[1];
 leftPlayer.addEventListener("click", function(){
-	leftPlayerScore.textContent = Number(leftPlayerScore.textContent) + 1;
-	var score = Number(leftPlayerScore.textContent);
-	if(score === Number(rule.textContent)){
-		leftPlayerScore.style.border = "3px solid red";
+	if(Number(rightPlayerScore.textContent) < Number(rule.textContent)){
+		if(Number(rule.textContent) > Number(leftPlayerScore.textContent)){
+			leftPlayerScore.textContent = Number(leftPlayerScore.textContent) + 1;
+			var score = Number(leftPlayerScore.textContent);
+			if(score === Number(rule.textContent)){
+				leftPlayerScore.style.border = "3px solid red";
+			}
+		}
 	}
 })
 
-// right-side
+// right-side player scores
 var rightPlayer = document.getElementsByTagName("input")[2];
 rightPlayer.addEventListener("click", function(){
-	rightPlayerScore.textContent = Number(rightPlayerScore.textContent) + 1;
-	var score = Number(rightPlayerScore.textContent);
-	if(score === Number(rule.textContent)){
-		rightPlayerScore.style.border = "3px solid red";
+	if(Number(leftPlayerScore.textContent) < Number(rule.textContent)){
+		if(Number(rule.textContent) > Number(rightPlayerScore.textContent)){
+			rightPlayerScore.textContent = Number(rightPlayerScore.textContent) + 1;
+			var score = Number(rightPlayerScore.textContent);
+			if(score === Number(rule.textContent)){
+				rightPlayerScore.style.border = "3px solid red";
+			}
+		}
 	}
 })
 
