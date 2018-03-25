@@ -17,9 +17,8 @@ var rule = playingTo.firstChild.nextSibling;   // span
 // to set highest score playing to
 var ruleSetting = document.getElementsByTagName("input")[0];
 ruleSetting.value = 5;
-ruleSetting.addEventListener("click", function(argument) {
+ruleSetting.addEventListener("input", function(argument) {
 	rule.textContent = this.value;
-
 })
 
 // left-side player scores
